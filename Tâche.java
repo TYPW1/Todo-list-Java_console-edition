@@ -1,6 +1,7 @@
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Tâche extends ElementListe {
+public class Tâche extends ElementListe{
     private LocalDate dateEcheance;
     private int priorite;
     private boolean accomplie;

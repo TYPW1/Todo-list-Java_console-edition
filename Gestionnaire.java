@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
-public class Gestionnaire {
+public class Gestionnaire implements Serializable {
     private List<ElementListe> elements;
 
     public Gestionnaire() {
@@ -59,6 +60,7 @@ public class Gestionnaire {
         }
         return projets;
     }    
+
 
     // ... Additional methods for displaying tasks based on criteria will be added here ...
 }

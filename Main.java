@@ -3,10 +3,12 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Scanner;
+import java.io.*;
 
 public class Main {
     private static Gestionnaire gestionnaire = new Gestionnaire();
     private static Scanner scanner = new Scanner(System.in);
+    private static final String SAVE_FILE = "todo_data.ser";
 
     public static void main(String[] args) {
         boolean exit = false;
@@ -43,6 +45,8 @@ public class Main {
                     System.out.println("Invalid choice!");
             }
         }
+        loadData(); 
+        saveData(); 
     }
 
     private static void displayMenu() {
@@ -60,9 +64,10 @@ public class Main {
         System.out.println("| 8. Exit                        |");
         System.out.println("+--------------------------------+");
         System.out.print("Enter your choice: ");
-    }    
+    }
 
-private static void createTask() {
+
+    private static void createTask() {
     System.out.println("\n========== ADD NEW TASK ==========");
     System.out.print("Enter task title: ");
     String title = scanner.nextLine();
@@ -85,6 +90,7 @@ private static void createTask() {
     Tâche newTask = new Tâche(title, description, dueDate, priority);
     gestionnaire.ajouterElement(newTask);
     System.out.println("Task added successfully!");
+    
 }
 
 private static LocalDate parseDate(String dateString) {
@@ -157,6 +163,26 @@ private static void deleteProject() {
         System.out.println("Invalid choice!");
     }
 }
+
+    private static void saveData() {
+    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(SAVE_FILE))) {
+        oos.writeObject(gestionnaire);
+    } catch (IOException e) {
+        System.out.println("Error saving data: " + e.getMessage());
+    }
+}
+
+    private static void loadData() {
+    File file = new File(SAVE_FILE);
+    if (file.exists()) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+            gestionnaire = (Gestionnaire) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error loading data: " + e.getMessage());
+        }
+    }
+}
+
 
     // ... other helper methods for the remaining functionalities will be added here ...
 }

@@ -1,4 +1,6 @@
-public class ElementListe {
+import java.io.Serializable;
+
+public class ElementListe implements Serializable{
     protected String titre;
     protected String description;
 

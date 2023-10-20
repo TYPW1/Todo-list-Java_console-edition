@@ -1,7 +1,5 @@
 # Todo List - Java Console Edition
 
-Java Badge
-
 A simple, yet effective, Todo List application built with Java for the console. Manage your tasks and group them into projects seamlessly.
 # Features
 

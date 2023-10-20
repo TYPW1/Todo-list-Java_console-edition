@@ -5,7 +5,7 @@ Java Badge
 A simple, yet effective, Todo List application built with Java for the console. Manage your tasks and group them into projects seamlessly.
 # Features
 
-    Task Management: Add tasks with titles, descriptions, due dates, and priority levels.
+   Task Management: Add tasks with titles, descriptions, due dates, and priority levels.
     Project Management: Group tasks under projects for better organization.
     User-Friendly Interface: A structured console interface with clear prompts and messages.
     Error Handling: Provides informative feedback for incorrect inputs without crashing.
@@ -30,7 +30,7 @@ A simple, yet effective, Todo List application built with Java for the console. 
 # Run the Application
 
 
-    ```java Main```
+```java Main```
 
 Follow the On-Screen Prompts: The application provides a menu-driven interface. Just choose the desired option and follow the prompts!
 
@@ -38,7 +38,7 @@ Follow the On-Screen Prompts: The application provides a menu-driven interface. 
 
 The application follows Object-Oriented Programming principles and consists of the following classes:
 
-    ElementListe: A base class representing any list element.
+   ElementListe: A base class representing any list element.
     Tâche: Represents individual tasks with attributes such as title, description, due date, and priority.
     Projet: Represents a project consisting of multiple tasks.
     Gestionnaire: Manages the overall list of tasks and projects, offering functionalities like adding, deleting, and displaying tasks and projects.

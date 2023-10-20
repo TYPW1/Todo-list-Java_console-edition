@@ -12,17 +12,17 @@ A simple, yet effective, Todo List application built with Java for the console. 
 
 # How to Use
 
-    ## Clone the Repository
+## Clone the Repository
 
 
 ```git clone https://github.com/TYPW1/Todo-list-Java_console-edition.git```
 
-  ## Navigate to the Directory
+## Navigate to the Directory
 
 
 ```cd Todo-list-Java_console-edition```
 
-  ## Compile the Java Files
+## Compile the Java Files
 
 
 ```javac Main.java```
@@ -32,7 +32,7 @@ A simple, yet effective, Todo List application built with Java for the console. 
 
     ```java Main```
 
-    Follow the On-Screen Prompts: The application provides a menu-driven interface. Just choose the desired option and follow the prompts!
+Follow the On-Screen Prompts: The application provides a menu-driven interface. Just choose the desired option and follow the prompts!
 
 # Structure
 
